@@ -1,4 +1,4 @@
-# FHSS Starter App
+# Face Card App
 _When starting a new project repo in GitHub, use this repository as the template._
 
 This is the starter app for FHSS web applications. It includes all necessary frontend, backend, and development environment code necessary to begin developing. Don't forget to use the included CLI to rename the project from "Starter" to whatever the name of the new project is. 
