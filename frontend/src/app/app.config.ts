@@ -14,7 +14,7 @@ export const provideKeycloakAngular = () => {
   return provideKeycloak({
     config: {
       url: "http://localhost:8080",
-      realm: "starter",
+      realm: "face-card-app",
       clientId: "frontend",
     },
     initOptions: {

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "FhssStarterApp": {
+    "FaceCardApp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -63,10 +63,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "FhssStarterApp:build:production"
+              "buildTarget": "FaceCardApp:build:production"
             },
             "development": {
-              "buildTarget": "FhssStarterApp:build:development"
+              "buildTarget": "FaceCardApp:build:development"
             }
           },
           "defaultConfiguration": "development",
