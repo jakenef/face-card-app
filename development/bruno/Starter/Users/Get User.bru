@@ -1,0 +1,15 @@
+meta {
+  name: Get User
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:8000/api/user-management/:userId
+  body: none
+  auth: none
+}
+
+params:path {
+  userId: 11592d00-9d3d-41b3-9858-6184a9fe20a7
+}

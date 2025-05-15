@@ -1,0 +1,10 @@
+{
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=827846
+  "recommendations": [
+    "angular.ng-template",
+    "denoland.vscode-deno",
+    "ms-azuretools.vscode-docker",
+    "Prisma.prisma",
+    "EthanSK.restore-terminals"
+  ]
+}

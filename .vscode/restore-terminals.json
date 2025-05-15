@@ -1,0 +1,37 @@
+{
+  "keepExistingTerminalsOpen": false,
+  "runOnStartup": false,
+  "terminals": [
+    {
+      "splitTerminals": [
+        {
+          "name": "docker",
+          "commands": ["cd development", "docker compose up"]
+        },
+        {
+          "name": "prisma",
+          "commands": ["cd backend", "deno task prisma:studio --browser none"]
+        }
+      ]
+    },
+    {
+      "splitTerminals": [
+        {
+          "name": "backend",
+          "commands": ["cd backend", "deno task dev"]
+        },
+        {
+          "name": "frontend",
+          "commands": ["cd frontend", "ng serve"]
+        }
+      ]
+    },
+    {
+      "splitTerminals": [
+        {
+          "name": "working"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+
+# Node
+node_modules
+.env
+.dev.env
+.prod.env
+
+# Compiled output
+/dist
+/prisma/generated
+/coverage
+
+# System files
+.DS_Store
+Thumbs.db

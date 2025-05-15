@@ -1,0 +1,50 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../node_modules/generated"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum ByuAccountType {
+  NonByu
+  Student
+  Employee
+  ServiceAccount
+}
+
+model User {
+  ///////////////////
+  // DO NOT MODIFY //
+  ///////////////////
+  id                 String         @id @default(uuid())
+  createdAt          DateTime       @default(now())
+  updatedAt          DateTime       @updatedAt
+  // BYU info
+  accountType        ByuAccountType
+  netId              String         @unique
+  byuId              String?
+  workerId           String?
+  // Person info
+  firstName          String
+  middleName         String?
+  lastName           String
+  suffix             String?
+  preferredFirstName String
+  preferredLastName  String
+  // Keycloak info
+  keycloakId         String         @unique
+  ///////////////////
+  // DO NOT MODIFY //
+  ///////////////////
+
+  // Additional fields can be added below
+}

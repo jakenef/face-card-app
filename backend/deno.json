@@ -1,0 +1,36 @@
+{
+  "tasks": {
+    "start": "deno run --env-file --allow-env --allow-net=:8000 --allow-read=dist/browser ./src/main.ts",
+    "dev": "deno run -A --watch --env-file ./src/main.ts",
+    "test:dev": "deno test -A",
+    "test": "deno task test:dev -q",
+    "cli": "deno run -A ./cli/cli.ts",
+
+    "prisma": "deno run -A npm:prisma",
+    "prisma:migrate": "deno task prisma migrate dev",
+    "prisma:studio": "deno task prisma studio",
+    "prisma:push": "deno task prisma db push",
+    "prisma:seed": "deno run -A prisma/seed.ts",
+    "prisma:generate": "deno task prisma generate --no-hints --schema ./prisma/schema.prisma"
+  },
+  "imports": {
+    "@faker-js/faker": "npm:@faker-js/faker@^9.7.0",
+    "@fhss-web-team/backend-utils": "jsr:@fhss-web-team/backend-utils@^1.0.0",
+    "@oak/oak": "jsr:@oak/oak@^17.1.4",
+    "@std/expect": "jsr:@std/expect@^1.0.15",
+    "@std/fmt": "jsr:@std/fmt@^1.0.5",
+    "@std/testing": "jsr:@std/testing@^1.0.11",
+    "@std/dotenv": "jsr:@std/dotenv/load",
+    "@std/path": "jsr:@std/path@^1.0.9",
+    "jose": "npm:jose@^6.0.10",
+    "minio": "npm:minio@^8.0.5",
+    "prisma": "npm:prisma@^6.7.0",
+    "@prisma/client": "npm:@prisma/client@^6.7.0",
+    "prisma/client": "./prisma/client.ts"
+  },
+  "nodeModulesDir": "auto",
+  "fmt": {
+    "lineWidth": 120,
+    "singleQuote": true
+  }
+}

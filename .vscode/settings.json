@@ -1,0 +1,8 @@
+{
+  "deno.enable": true,
+  "deno.enablePaths": ["./backend"],
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma",
+    "editor.formatOnSave": true
+  }
+}
